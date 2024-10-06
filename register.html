@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style2.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="flex">
+            <div class="col">
+                <div class="card">
+                    <img src="logo.png" alt="Logo" class="logo">
+                    <h2>Create an account</h2>
+                    <br>
+                    <input type="text" id="username" placeholder="Name" required>
+                    <input type="number" id="number" placeholder="Phone number" required>
+
+                    <div class="links">
+                        <a href="#">Use email</a>
+                    </div>
+
+                    <h4>Date of birth</h4>
+                    <p>Facilisi sem pulvinar velit nunc, gravida scelerisque amet nibh sit. Quis bibendum ante phasellus
+                        metus, magna lacinia
+                        sed augue. Odio enim nascetur leo mauris vel eget. Pretium id ullamcorper blandit viverra
+                        dignissim eget tellus. Nibh mi
+                        massa in molestie a sit. Elit congue.</p>
+                    <div class="dob">
+                        <select required>
+                            <option value="" disabled selected>Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                        <select required>
+                            <option value="" disabled selected>Day</option>
+                            <script>
+                                for (let i = 1; i <= 31; i++) {
+                                    document.write(`<option value="${i}">${i}</option>`);
+                                }
+                            </script>
+                        </select>
+                        <select required>
+                            <option value="" disabled selected>Year</option>
+                            <script>
+                                const currentYear = new Date().getFullYear();
+                                for (let i = currentYear; i >= 1900; i--) {
+                                    document.write(`<option value="${i}">${i}</option>`);
+                                }
+                            </script>
+                        </select>
+                    </div>
+                    <br>
+
+                    <button onclick="window.location.href='#'">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
